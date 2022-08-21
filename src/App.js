@@ -1,15 +1,21 @@
-import Counter from "./components/Counter"
-import FocusComponent from "./components/FocusComponent"
-import SquareNumber from "./components/SquareNumber"
-import WindowSize from "./components/WindowSize"
+import './App.css'
+import CounterContainer from "./components/CounterContainer"
+import Controls from "./components/Controls"
+import TimeProvider from './Contexts/TimerContext';
+import TickProvider from './Contexts/tickContext';
 
 function App() {
+
   return (
-    <div >
-      {/* <Counter/> */}
-      {/* <FocusComponent/> */}
-      {/* <SquareNumber/> */}
-      <WindowSize/>
+    <div className="App">
+      <div>
+        <TimeProvider>
+          <TickProvider>
+            <CounterContainer />
+            <Controls />
+          </TickProvider>
+        </TimeProvider>
+      </div>
     </div>
   );
 }

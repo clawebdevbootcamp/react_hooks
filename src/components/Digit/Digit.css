@@ -1,0 +1,72 @@
+.digitContainer {
+    width: 70px;
+    height: 120px;
+    position: relative;
+    perspective: 300px;
+    perspective-origin: 50% 50%;
+    box-shadow: 1px 10px 10px -6px grey;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.card span {
+    font-size: 5em;
+}
+
+.upper {
+    align-items: flex-end;
+    border-bottom: 1px solid white;
+}
+
+.upper span {
+    transform: translateY(50%);
+}
+
+.lower {
+    align-items: flex-start;
+    border-top: 1px solid white;
+    border-radius: 0 0 5px 5px;
+}
+
+.lower span {
+    transform: translateY(-50%);
+}
+
+.flip, .unflip {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 600ms linear;
+    opacity: 0;
+}
+
+.flip {
+    top: 0;
+    transform-origin: 50% 100%;
+    transform: rotateX(0deg);
+}
+
+.unflip {
+    bottom: -2px;
+    transform-origin: 50% 0%;
+    transform: rotateX(180deg);
+}
+
+.fold {
+    opacity: 1;
+}
+
+.flip.fold {
+    transform: rotateX(-180deg);
+}
+
+.unflip.fold {
+    transform: rotateX(0deg);
+}

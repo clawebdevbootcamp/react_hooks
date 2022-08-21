@@ -1,0 +1,40 @@
+.button-container {
+    width: 120px;
+    height: 60px;
+    display: grid;
+    place-content: stretch;
+}
+
+.button-container > button {
+    
+    text-align: center;
+    text-transform: uppercase;
+    transition: .5s;
+    background-size: 200% auto;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 120%;
+    font-weight: bold;
+    outline: none;
+    border:none;
+}
+
+.button-container.green button {
+    background-image: linear-gradient(to right, #76b852 0%, #8DC26F 51%, #76b852 100%);
+}
+
+.button-container.yellow button {
+    background-image: linear-gradient(to right, #F2994A 0%, #F2C94C 51%, #F2994A 100%);
+}
+
+.button-container.red button {
+    background-image: linear-gradient(to right, #e43a15 0%, #e65245 51%, #e43a15 100%);
+}
+
+.button-container > button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
