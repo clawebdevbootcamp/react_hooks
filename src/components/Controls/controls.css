@@ -1,0 +1,59 @@
+.section {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    place-content: center stretch;
+}
+
+.section .body {
+    display: grid;
+    place-content: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+.controls-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: rgba(255, 255, 255, 33%);
+    border-radius: 10px;
+}
+
+.controls-container::after {
+    content: '';
+    height: 60%;
+    position: absolute;
+    left: 47%;
+    top: 50%;
+    border: 1px solid black;
+    transform: translateY(-50%);
+}
+
+.input-container {
+    place-self: stretch;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-container b {
+    font-size: 40px;
+}
+
+.digit-input {
+    width: 50px;
+    height: 60px;
+    margin-inline: 5px;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}

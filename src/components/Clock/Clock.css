@@ -1,0 +1,11 @@
+.clockContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 35px;
+}
+
+.clockContainer > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
